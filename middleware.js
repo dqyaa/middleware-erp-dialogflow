@@ -7,13 +7,13 @@ const PORT = process.env.PORT || 3000;
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-// Replace 'YOUR_API_KEY' with the provided API key
+// API key
 const API_KEY = 'e6bb4ee8968f63c';
 
-// Replace 'YOUR_API_SECRET' with the provided API secret
+// API secret
 const API_SECRET = 'a47b875be0846be';
 
-// Define a route for the root path "/"
+//  route for the root path "/"
 app.get('/', (req, res) => {
   res.send('Hello from the middleware!');
 });
@@ -30,7 +30,7 @@ app.post('/webhook', async (req, res) => {
         first_name,
         status,
         company_name
-        // Add any additional fields as necessary
+        
       }
     }, {
       headers: {
